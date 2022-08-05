@@ -1,0 +1,505 @@
+/* Start Global */
+*{  box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    user-select: none;
+}
+body{
+    font-family: monospace;
+    color:black;
+    height: 2000px;
+}
+h1,h2,h3,h4,h5,h6 {text-transform: capitalize;  margin: 0px;}
+.container{ width: 1200px;
+            margin: auto;
+}
+ul
+{
+    list-style: none;
+}
+.scrollbtn 
+{
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 999;
+    background-color: rgba(235, 29, 54, 1);
+}
+.special-heading{
+    padding-top: 40px;
+    color:rgba(235, 29, 54, 1);
+}
+.special-heading:after
+{
+    content: " ";
+    display: block;
+    border-bottom: 2px solid #000;
+    top: 75px;
+    left: 0px;
+    width: 40px;
+}
+
+/* End Global */
+
+/* Navbar */ 
+nav{
+     text-align: center;
+     font-size: 20px;
+     font-weight: bold;
+     position: absolute;
+     width: 100%;
+     z-index: 5;
+     padding: 20px;
+     color:white;
+}
+
+nav .title { width: 50%; 
+             float: left; 
+             margin-top: 10px;
+             text-transform: uppercase;
+             font-size: 25px;
+             text-align: left;
+             color:red;
+             text-shadow: 2px 2px 3px white;
+}
+nav .title img
+{
+    width: 50px; 
+    height: 50px;
+    float: left;
+    margin-right: 20px;
+}
+nav ul { width: 50%; 
+         float: left
+}
+
+nav ul li { display: inline-block; 
+            padding: 15px 0px; 
+            margin: 0px 10px 0px 0px;
+            text-transform: capitalize;
+            border-bottom: 1px solid transparent;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:white;
+}
+nav ul li.active a,
+nav ul li a:hover {
+    color:#EB1D36; 
+    cursor: pointer; 
+}
+nav ul li:hover,nav ul li.active {
+     border-bottom-color: #EB1D36;
+}
+/* End Navbar */
+
+/* Start Header */
+header 
+{
+    color:white;
+    background-image: url(../images/elahlycover.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.overlay
+{
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    
+}
+/* slider in header */
+header .bx-wrapper {
+     height: 90%;
+     background: none;
+     margin: 0px;
+     border: none;
+     outline: none;
+     overflow: hidden;
+     box-shadow: none;
+}
+header .bx-wrapper .bx-viewport
+{
+    height: 90% !important;
+}
+header .slider {
+    height: 90%;
+}
+header .slider li
+{
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    max-height: 200px;
+    font-size: 20px;
+}
+header .slider li h2 {
+    padding: 35px;
+    font-size: 40px;
+}
+header .slider li h2 span ,header .overlay > span:hover {
+    color:#EB1D36;
+}
+header .slider li img 
+{
+    display: block;
+    margin: 0px auto;
+    width: 30%;
+    max-height: 200px;
+    border-radius: 10%;
+    border: 2px solid #888;
+}
+header .overlay > span {
+    border: 3px solid #FFF;
+    position: absolute;
+    width: 150px;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -75px;
+    padding: 20px;
+}
+header .overlay > span:hover{
+    border-color: #EB1D36;
+    cursor: pointer;
+}
+/* slider in header */
+/* End Header */
+
+/* start Services */
+.services .container{
+    height: 500px;
+    position: relative;
+    border-bottom: 2px solid #888;
+}
+.services .topservices , .services .bottomservices {
+    display: flex; 
+    justify-content:space-between;
+    margin-top: 5%;
+}
+.services .topservices >div , .services .bottomservices>div {
+    width: 33%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.services .topservices >div i ,.services .bottomservices >div i  {
+    width: 30%;
+    height: 100%;
+    color:#EB1D36;
+    margin-top: 20px;
+}
+.topiccontent 
+{
+    width: 70%;
+}
+.topiccontent h4
+{
+    font-size: 25px;
+}
+.topiccontent p 
+{
+    margin-top: 25px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color:#888;
+}
+/* start Services */
+
+/* start team */
+.ourteam .container {
+    padding: 0px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.ourteam .info {
+    width: 30%;
+}
+.ourteam .gallery {
+    width: 70%;
+}
+.ourteam .info p {
+    margin-top: 40px;
+    color:#888;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.ourteam .gallery 
+{
+    display: flex;
+    justify-content: space-between;
+}
+.ourteam .gallery div 
+{
+    display: block;
+    width: 23%;
+    height: 50%;
+    margin-top: 50px;
+    position: relative;
+}
+.ourteam .gallery div:first-of-type {margin-left: 40px;}
+.ourteam .gallery div img {
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+.ourteam .gallery img:hover 
+{
+    cursor: pointer;
+}
+.team-overlay
+{ 
+    position: absolute;
+    display: none;
+    height: 100%;
+    width:100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(235, 29, 54, 0.8);
+    z-index: 10;
+    text-align: center;
+}
+.team-overlay h1
+{
+    color:white;
+    font-size: 20px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    padding-top: 0px;
+}
+.team-overlay h1.special-heading:after
+{
+    position: absolute;
+    left:45px;
+    top: 100%;
+    border-bottom-color: #FFF;
+}
+/* end team */
+
+/* start squad */
+.squad 
+{
+    height: 550px;
+    background-image: url('../images/squadcover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:white;
+    text-align: center;
+    position: relative;
+}
+.squad .overlay {
+    background-color: rgba(0,0,0,0.8);
+}
+.squadshow{
+    position: relative;
+}
+.squad .squadshow h1 {
+    color: white;
+    margin: 20px 0px 20px;
+}
+.squad .squadshow h1.special-heading:after
+{
+    position: absolute;
+    left: 500px;
+    top:80px;
+    border-color:white;
+    width: 200px;
+}
+.squad .squadshow >p  { font-size: 18px; margin: 100px 0px 30px;}
+.squad .squadshow p:before ,.squad .squadshow p:after {
+    content: " \" ";
+}
+.squad .squadshow >span {font-size: 16px;}
+
+.squad .squadshow div {
+    width: 20%;
+    margin: 40px auto;
+    height: 300px;
+}
+.squad .squadshow div:not(:first-of-type)
+{
+    display: none;
+}
+.squad .squadshow div img 
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.squad .squadshow div p ,.squad .squadshow div span {font-size: 18px; margin-top: 20px; text-transform: capitalize;}
+.squad .squadshow div span{color:#EB1D36;}
+/* end squad */
+
+/* start coachs */
+.coachs{ height: 700px;}
+.coachs .tabs span
+{
+    display: inline-block;
+    width: 100px;
+    border: 2px solid #888;
+    padding: 10px;
+    border-radius: 10%;
+    color:#888;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.coachs .tabs span:hover , .coachs .tabs span.clicked
+{
+    border-color: #EB1D36;
+    background-color: #EB1D36;
+    color:white;
+}
+.coachs .showcoach
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.coachs .showcoach div 
+{
+    transition: all 2s ease-in-out;
+    flex-grow: 0.25;
+    margin-top: 10px;
+    width: 30%;
+    max-height: 200px;
+    position: relative;
+}
+.coachs .showcoach div span >span {
+    border: 2px solid #FFF;
+    padding: 10px;
+    border-radius: 10%;
+    color:#FFF;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+    line-height: 200px;
+}
+.coachs .showcoach div img
+{
+    height: 100%;
+    width: 100%;
+}
+.coachs .showcoach div:hover
+{
+    cursor: pointer;
+}
+.coachs .showcoach div .achievements
+{
+    color:white;
+    display: inline;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    text-align: right;
+}
+.coachs .showcoach div .achievements span
+{
+    font-size: 15px;
+}
+/* end coachs */
+
+/* start footer */
+ .footer
+{
+    height: 400px;
+    background-color: #212121;
+    color:#888;
+    text-transform: capitalize;
+    flex-direction: row;
+}
+.footer h1 {color:white; margin-top: 60px;}
+.footer .container
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.footer section {
+    width: 24%;
+    height: 100%;
+    padding: 10px;
+}
+.footer .about h1 {margin-top: 60px;}
+.footer .about p {margin-top: 30px;}
+.footer .about .links {list-style: none; margin-top: 40px;}
+.footer .about .links li {display: inline-block;}
+.footer .about .links li a {color:#888;}
+.footer .about .links li a:hover {color:#EB1D36; cursor: pointer;}
+.footer .about .links li a i {width: 100%;}
+.footer .about span {display: block; margin-top: 20px;}
+
+.footer .tags .tech {list-style: none; margin-top: 30px;}
+.footer .tags .tech li {display: inline-block;
+    border:2px solid #888; 
+    padding: 5px;
+    font-size: 18px;
+    margin: 10px 5px 0px;
+    text-transform: uppercase;
+    color:white;
+}
+
+.footer .recent {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+}
+
+.footer .recent div img {
+    float: left;
+    width: 50%;
+    height:100%;
+    display: block;
+}
+.footer .recent div .details{
+    float: left;
+    width: 48%;
+    height: 100%;
+    margin-left: 2%;
+}
+.footer .recent div .details p {margin-top: 15px; color:white;}
+.footer .recent div .details span
+{
+    display: block;
+    margin-top: 5px;
+}
+
+.footer .contact ul{margin-top: 30px; list-style: none; font-size: 18px;}
+.footer .contact ul li {margin: 5px 0px 10px;}
+.footer .contact ul li:after{
+    content: " ";
+    display: block;
+    margin-top: 5px;
+    border-bottom: 2px solid #888;
+    width: 100%;
+}
+.footer .contact ul li a {color:#888;}
+.footer .contact ul span {font-size: 18px; color:white;margin-top: 10px;}
+/* end footer */
+
+/* My Framework */
+.clearfix
+{
+    clear:both;
+}
+/* End Framework */
